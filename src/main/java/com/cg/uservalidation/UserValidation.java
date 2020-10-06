@@ -20,8 +20,9 @@ public class UserValidation {
 
     }
     public boolean validatePassword(String password) {
-        return Pattern.matches("(?=.*[a-z])(?=.*[A-Z])(?=.*\\d)[a-zA-Z0-9]{8,}", password);
-
+        boolean passCheck = Pattern.matches("^(?=.*[a-z])(?=.*[A-Z])(?=.*\\d).{8,}$", password);
+        passCheck = passCheck && Pattern.matches("\\w*[^\\w\\s]{1}\\w*", password);
+        return passCheck;
     }
 
     public static void main(String args[]) {
