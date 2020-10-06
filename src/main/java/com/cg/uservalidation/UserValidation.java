@@ -19,6 +19,10 @@ public class UserValidation {
         return Pattern.matches("[0-9]{2}\s{1}[1-9]{1}[0-9]{9}", mobile);
 
     }
+    public boolean validatePassword(String password) {
+        return Pattern.matches("[a-zA-Z]{8,}", password);
+
+    }
 
     public static void main(String args[]) {
         Scanner scanner = new Scanner(System.in);
@@ -27,5 +31,6 @@ public class UserValidation {
         System.out.println(userValidation.validateLastName(scanner.nextLine()));
         System.out.println(userValidation.validateEmail(scanner.nextLine()));
         System.out.println(userValidation.validateMobile(scanner.nextLine()));
+        System.out.println(userValidation.validatePassword(scanner.nextLine()));
     }
 }
