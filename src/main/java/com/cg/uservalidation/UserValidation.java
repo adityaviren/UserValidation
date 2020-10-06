@@ -20,7 +20,7 @@ public class UserValidation {
 
     }
     public boolean validatePassword(String password) {
-        return Pattern.matches("[a-zA-Z]{8,}", password);
+        return Pattern.matches("(?=.*[a-z])(?=.*[A-Z])[a-zA-Z]{8,}", password);
 
     }
 
