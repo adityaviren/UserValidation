@@ -12,7 +12,8 @@ public class UserValidation {
 
     }
     public boolean validateEmail(String email) {
-        return Pattern.matches("[a-z]{1,}(\\.{1}[a-z]{1,})*@{1}[a-z]{1,}(.co){1}(\\.{1}[a-z]{1,})*", email);
+        return Pattern.matches("^[A-Za-z0-9]+(\\.[_A-Za-z0-9-])*@"
+                + "[A-Za-z0-9]+(\\.[A-Za-z0-9]+){0,1}(\\.[A-Za-z]{2,})$",email);
 
     }
     public boolean validateMobile(String mobile) {
