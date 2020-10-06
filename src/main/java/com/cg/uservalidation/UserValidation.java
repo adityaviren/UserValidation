@@ -12,7 +12,7 @@ public class UserValidation {
 
     }
     public boolean validateEmail(String email) {
-        return Pattern.matches("^[A-Za-z0-9]+(\\.[_A-Za-z0-9-])*@"
+        return Pattern.matches("^[A-Za-z0-9]+(\\.[_A-Za-z0-9-]+)*@"
                 + "[A-Za-z0-9]+(\\.[A-Za-z0-9]+){0,1}(\\.[A-Za-z]{2,})$",email);
 
     }
@@ -21,12 +21,21 @@ public class UserValidation {
 
     }
     public boolean validatePassword(String password) {
-        boolean passCheck = Pattern.matches("^(?=.*[a-z])(?=.*[A-Z])(?=.*\\d).{8,}$", password);
+        boolean passCheck;
+        passCheck = Pattern.matches("^(?=.*[a-z])(?=.*[A-Z])(?=.*\\d).{8,}$",
+                password);
         passCheck = passCheck && Pattern.matches("\\w*[^\\w\\s]{1}\\w*", password);
         return passCheck;
     }
 
-    public static void main(String args[]) {
+    public String happyOrSad(String message) {
+        if(message.contains("sad"))
+            return "sad";
+        else
+            return "happy";
+    }
+
+    public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
         UserValidation userValidation = new UserValidation();
         System.out.println(userValidation.validateFirstName(scanner.nextLine()));
@@ -34,5 +43,6 @@ public class UserValidation {
         System.out.println(userValidation.validateEmail(scanner.nextLine()));
         System.out.println(userValidation.validateMobile(scanner.nextLine()));
         System.out.println(userValidation.validatePassword(scanner.nextLine()));
+        System.out.println(userValidation.happyOrSad(scanner.nextLine()));
     }
 }
