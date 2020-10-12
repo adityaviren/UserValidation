@@ -10,9 +10,9 @@ public class UserValidationTest {
     @Test
     public void givenFirstName_whenEntered_shouldReturnValidation() {
         try {
-            Assert.assertTrue(userValidation.validateFirstName("Aditya"));
+            Assert.assertTrue(userValidation.validateFirstName("Adity"));
         } catch (FirstNameException e){
-            e.printStackTrace();
+            e.getMessage();
         }
     }
     @Test

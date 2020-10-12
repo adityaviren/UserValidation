@@ -1,7 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="com.cg.uservalidation.UserValidationTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2020-10-07T18:01:58" hostname="LAPTOP-OULI8K5P" time="0.0">
+<testsuite name="com.cg.uservalidation.UserValidationTest" tests="6" skipped="0" failures="0" errors="0" timestamp="2020-10-12T06:54:43" hostname="LAPTOP-OULI8K5P" time="0.006">
   <properties/>
-  <testcase name="givenFirstName_whenEntered_shouldReturnValidation" classname="com.cg.uservalidation.UserValidationTest" time="0.0"/>
+  <testcase name="givenEmail_whenEntered_shouldReturnValidation" classname="com.cg.uservalidation.UserValidationTest" time="0.002"/>
+  <testcase name="givenPassword_whenEntered_shouldReturnValidation" classname="com.cg.uservalidation.UserValidationTest" time="0.001"/>
+  <testcase name="givenString_whenEntered_shouldReturnSad" classname="com.cg.uservalidation.UserValidationTest" time="0.001"/>
+  <testcase name="givenLastName_whenEntered_shouldReturnValidation" classname="com.cg.uservalidation.UserValidationTest" time="0.0"/>
+  <testcase name="givenMobile_whenEntered_shouldReturnValidation" classname="com.cg.uservalidation.UserValidationTest" time="0.0"/>
+  <testcase name="givenFirstName_whenEntered_shouldReturnValidation" classname="com.cg.uservalidation.UserValidationTest" time="0.001"/>
   <system-out><![CDATA[]]></system-out>
   <system-err><![CDATA[]]></system-err>
 </testsuite>
